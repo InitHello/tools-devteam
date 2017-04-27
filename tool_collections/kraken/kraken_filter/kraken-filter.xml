@@ -1,4 +1,4 @@
-<tool id="kraken-filter" name="Kraken-filter" version="1.2.1">
+<tool id="kraken-filter" name="Kraken-filter" version="1.2.2">
     <description>
         filter classification by confidence score
     </description>
@@ -46,7 +46,7 @@ At present, we have not yet developed a confidence score with a solid probabilis
 
 A sequence label's score is a fraction C/Q, where C is the number of k-mers mapped to LCA values in the clade rooted at the label, and Q is the number of k-mers in the sequence that lack an ambiguous nucleotide (i.e., they were queried against the database). Consider the example of the LCA mappings in Kraken's output::
 
- 562:13 561:4 A:31 0:1 562:3 
+ 562:13 561:4 A:31 0:1 562:3
 
 would indicate that::
 

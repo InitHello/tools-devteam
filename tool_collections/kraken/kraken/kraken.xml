@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<tool id="kraken" name="Kraken" version="1.2.1">
+<tool id="kraken" name="Kraken" version="1.2.2">
     <description>
         assign taxonomic labels to sequencing reads
     </description>
@@ -12,8 +12,8 @@
     <command>
         <![CDATA[
         @SET_DATABASE_PATH@ &&
-        kraken --threads \${GALAXY_SLOTS:-1} @INPUT_DATABASE@ 
-        
+        kraken --threads \${GALAXY_SLOTS:-1} @INPUT_DATABASE@
+
         ${only_classified_output}
 
         #if str( $quick_operation.quick ) == "yes":
@@ -79,7 +79,7 @@
 
         </conditional>
         <param label="Output classified and unclassified reads?" name="split_reads" type="boolean" help="Sets --unclassified-out and --classified-out"/>
-  
+
         <conditional name="quick_operation">
             <param name="quick" type="select" label="Enable quick operation?" help="--quick; Rather than searching all k-mers in a sequence, stop classification after a specified number of database hit">
                 <option value="yes">Yes</option>
@@ -131,7 +131,7 @@ Kraken is a taxonomic sequence classifier that assigns taxonomic labels to short
 
 The Galaxy version of Kraken implements the following options::
 
-        
+
   --fasta-input             Input is FASTA format
   --fastq-input             Input is FASTQ format
   --quick                   Quick operation (use first hit or hits)
@@ -141,7 +141,7 @@ The Galaxy version of Kraken implements the following options::
   --classified-out          Print classified sequences to filename
 
   --only-classified-output  Print no Kraken output for unclassified sequences
-                          
+
 ------
 
 **Output Format**

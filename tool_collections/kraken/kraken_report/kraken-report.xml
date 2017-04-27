@@ -1,8 +1,8 @@
-<tool id="kraken-report" name="Kraken-report" version="1.2.1">
+<tool id="kraken-report" name="Kraken-report" version="1.2.2">
     <description>
         view a sample report of your classification
     </description>
-    
+
     <macros>
         <import>macros.xml</import>
     </macros>
